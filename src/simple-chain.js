@@ -21,7 +21,7 @@ const chainMaker = {
       if (arr.length < position || typeof position != 'number' || position < 1) {
         this.chain = arr.join('~~');
         this.chain = '';
-        throw new NotImplementedError('You can\'t remove incorrect link!" on trying to remove wrong link');
+        throw new Error("You can't remove incorrect link!");
       };
       arr.splice(position - 1, 1)
       arr = arr.filter(function (el) { return el != ""; });
